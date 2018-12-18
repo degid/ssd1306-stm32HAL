@@ -34,25 +34,26 @@ BUILD_DIR = build
 ######################################
 # source
 ######################################
+FIRMWARE = $(HOME)/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0
 # C sources
 C_SOURCES =  \
 Src/main.c \
 Src/stm32f0xx_it.c \
 Src/stm32f0xx_hal_msp.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c \
-/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c \
+$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c \
 Src/system_stm32f0xx.c \
 Src/ssd1306.c \
 Src/fonts.c
@@ -113,11 +114,11 @@ AS_INCLUDES =
 # C includes
 C_INCLUDES =  \
 -IInc \
--I/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Inc \
--I/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy \
--I/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/CMSIS/Device/ST/STM32F0xx/Include \
--I/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/CMSIS/Include \
--I/home/saijin/STM32Cube/Repository/STM32Cube_FW_F0_V1.9.0/Drivers/CMSIS/Include
+-I$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Inc \
+-I$(FIRMWARE)/Drivers/STM32F0xx_HAL_Driver/Inc/Legacy \
+-I$(FIRMWARE)/Drivers/CMSIS/Device/ST/STM32F0xx/Include \
+-I$(FIRMWARE)/Drivers/CMSIS/Include \
+-I$(FIRMWARE)/Drivers/CMSIS/Include
 
 
 # compile gcc flags
